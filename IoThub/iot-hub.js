@@ -41,8 +41,8 @@ IoTHubReaderClient.prototype.startReadMessage = function(cb) {
 }
 
 function IoTHubReaderClient(connectionString, consumerGroupName) {
-  this.iotHubClient = EventHubClient.fromConnectionString(connectionString);
-  this.consumerGroupName = consumerGroupName;
+  this.iotHubClient = EventHubClient.fromConnectionString('HostName=Rpisimulator.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=ocTGyJMILS9zdgGR38YS1IYCx3wX61tHGETNmAeGndY=');
+  this.consumerGroupName = 'rpidata';
 }
 
 module.exports = IoTHubReaderClient;
